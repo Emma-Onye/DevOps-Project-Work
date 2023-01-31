@@ -46,7 +46,7 @@ Side Self Study
 - Conduct a Google search on what software development life cycle (SDLC) is and document your finding in a Google word file.
 - Conduct another Google search, understand what LAMP stack means.
 - Read about ‘chmod’ and ‘chown’ commands in Linux and understand how access and ownership of files and directories work.
-- Learn what TCP and UPD terms mean and how they are different. List down ports most commonly used in Web (http, https, ssh, telnet,
+- Learn what TCP and UDP terms mean and how they are different. List down ports most commonly used in Web (http, https, ssh, telnet,
  ftp, sftp, telnet)
 - Get yourself familiar with basic text editing in [Vi (Vim)](https://www.vim.org/) editor.[Practice Here](https://www.openvim.com/)
 
@@ -68,12 +68,7 @@ Right now, all we need to know is that AWS can provide us with a free virtual se
 
 Spinning up a new EC2 instance (an instance of a virtual server) is only a matter of a few clicks.
 
-You can either Watch the videos below to get yourself set up.
-
-1. AWS account setup and Provisioning an Ubuntu Server
-2. Connecting to your EC2 Instance
-
-Or follow the instructions below.
+Follow the instructions below.
 
 1. Register a new AWS account following this instruction.
 2. Select your preferred region (the closest to you) and launch a new EC2 instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM)
