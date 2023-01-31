@@ -14,14 +14,14 @@ sudo mkdir /var/www/projectlamp
 Next, assign ownership of the directory with your current system user:
 
 ```
-sudo chown -R $USER:$USER /var/www/projectlamp
+sudo chown -R $USER:$USER /var/www/lamp-project
 ```
 
 Then, create and open a new configuration file in Apache’s sites-available directory using your preferred command-line editor. 
 Here, we’ll be using vi or vim (They are the same by the way):
 
 ```
-sudo vi /etc/apache2/sites-available/projectlamp.conf
+sudo vi /etc/apache2/sites-available/lamp-project.conf
 ```
 
 This will create a new blank file. Paste in the following bare-bones configuration by hitting on i on the keyboard to enter the 
@@ -69,7 +69,7 @@ the instructions on those lines.
 You can now use a2ensite command to enable the new virtual host:
 
 ```
-sudo a2ensite projectlamp
+sudo a2ensite lamp-project
 ```
 
 You might want to disable the default website that comes installed with Apache. This is required if you’re not using a custom 
@@ -98,8 +98,7 @@ so that we can test that the virtual host works as expected:
 
 
 ```
-sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' 
-$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
+sudo echo 'Hello LAMP-project from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/lamp-project/index.html
 ```
 
 Now go to your browser and try to open your website URL using IP address:

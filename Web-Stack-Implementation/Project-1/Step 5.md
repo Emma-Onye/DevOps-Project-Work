@@ -8,7 +8,7 @@ regular application page.
 
 
 In case you want to change this behavior, you’ll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in 
-which the index.php file is listed within the DirectoryIndex directive:
+which the index.php file is listed within the Directory Index directive:
 
 
 ```
