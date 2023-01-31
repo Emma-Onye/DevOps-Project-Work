@@ -5,10 +5,10 @@ In this project, you will set up a domain called projectlamp, but you can replac
 Apache on Ubuntu 20.04 has one server block enabled by default that is configured to serve documents from the /var/www/html directory.
 We will leave this configuration as is and will add our own directory next next to the default one.
 
-Create the directory for projectlamp using ‘mkdir’ command as follows:
+Create the directory for lamp-project using ‘mkdir’ command as follows:
 
 ```
-sudo mkdir /var/www/projectlamp
+sudo mkdir /var/www/lamp-project
 ```
 
 Next, assign ownership of the directory with your current system user:
@@ -30,10 +30,10 @@ insert mode, and paste the text:
 
 ```
 <VirtualHost *:80>
-    ServerName projectlamp
-    ServerAlias www.projectlamp 
+    ServerName lamp-project
+    ServerAlias www.lamp-project 
     ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/projectlamp
+    DocumentRoot /var/www/lamp-project
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
@@ -58,7 +58,7 @@ sudo ls /etc/apache2/sites-available
 You will see something like this;
 
 ```
-000-default.conf  default-ssl.conf  projectlamp.conf
+000-default.conf  default-ssl.conf  lamp-project.conf
 ```
 
 With this VirtualHost configuration, we’re telling Apache to serve projectlamp using /var/www/projectlampl as its web root directory.

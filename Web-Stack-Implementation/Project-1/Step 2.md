@@ -46,7 +46,7 @@ mysql_native_password as default authentication method. We’re defining this us
 
 
 ```
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Mypass@1';
 ```
 
 Exit the MySQL shell with:

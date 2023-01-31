@@ -39,14 +39,30 @@ Apache is able to handle and process requests for PHP files.
 Create a new file named index.php inside your custom web root folder:
 
 ```
-vim /var/www/projectlamp/index.php
+vim /var/www/lamp-project/index.php
 ```
 
 This will open a blank file. Add the following text, which is valid PHP code, inside the file:
 
 ```
-<?php
-phpinfo();
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Logistics and Haulage Company</title>
+  </head>
+  <body>
+    <h1> <?php echo "Logistics and Haulage Company"; ?> </h1>
+    <p> <?php echo "We are a leading logistics and haulage company, providing efficient and reliable transportation services for businesses of all sizes."; ?> </p>
+    <h2>Services Offered:</h2>
+    <ul>
+      <li> <?php echo "Transportation of goods"; ?> </li>
+      <li> <?php echo "Loading and unloading services"; ?> </li>
+      <li> <?php echo "Freight forwarding"; ?> </li>
+      <li> <?php echo "Storage solutions"; ?> </li>
+    </ul>
+  </body>
+</html>
+
 ```
 
 When you are finished, save and close the file, refresh the page and you will see a page similar to this:
@@ -65,7 +81,7 @@ contains sensitive information about your PHP environment -and your Ubuntu serve
 
 
 ```
-sudo rm /var/www/projectlamp/index.php
+sudo rm /var/www/lamp-project/index.php
 ```
 
 Congratulations! You have finished your very first REAL LIFE PROJECT by deploying a LAMP stack website in AWS Cloud!
