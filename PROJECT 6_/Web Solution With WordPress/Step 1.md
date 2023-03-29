@@ -151,7 +151,7 @@ sudo mkdir -p /home/recovery/logs
 ```
 
 17. Mount /var/www/html on apps-lv logical volume
-# Check the directory to ensure overwrite of data to the mount point
+###Check the directory to ensure overwrite of data to the mount point 
 
 ---
 
