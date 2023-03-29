@@ -150,22 +150,20 @@ sudo mkdir -p /var/www/html
 sudo mkdir -p /home/recovery/logs
 ```
 
-17. Mount /var/www/html on apps-lv logical volume
-###Check the directory to ensure overwrite of data to the mount point 
+17. Check the directory to ensure overwrite of data to the mount point 
 
 ---
 
 sudo ls -l /var/www/html
 ---
 
-
-
+18. Mount /var/www/html on apps-lv logical volume
 
 ```
 sudo mount /dev/webdata-vg/apps-lv /var/www/html/
 ```
 
-18. Use rsync utility to backup all the files in the log directory /var/log into /home/recovery/logs (This is required before 
+19. Use rsync utility to backup all the files in the log directory /var/log into /home/recovery/logs (This is required before 
 mounting the file system)
 
 ```
@@ -173,20 +171,20 @@ sudo rsync -av /var/log/. /home/recovery/logs/
 ```
 
 
-19. Mount /var/log on logs-lv logical volume. (Note that all the existing data on /var/log will be deleted. That is why step 15 above 
+20. Mount /var/log on logs-lv logical volume. (Note that all the existing data on /var/log will be deleted. That is why step 15 above 
 is very important)
 
 ```
 sudo mount /dev/webdata-vg/logs-lv /var/log
 ```
 
-20. Restore log files back into /var/log directory
+21. Restore log files back into /var/log directory
 
 ```
 sudo rsync -av /home/recovery/logs/. /var/log
 ```
 
-21. Update /etc/fstab file so that the mount configuration will persist after restart of the server.
+22. Update /etc/fstab file so that the mount configuration will persist after restart of the server.
 Click on the next Step To update the /etc/fstab file
 
 
